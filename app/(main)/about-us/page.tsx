@@ -1,7 +1,10 @@
+import { NextHorizon } from '@/components/about-us/next-horizon/NextHorizon';
+import { PrincipleSection } from '@/components/about-us/principle-section/PrincipleSection';
+import { PurposeSection } from '@/components/about-us/purpose-section/PurposeSection';
 import { HighlightedText } from '@/components/shared/highlighted-text/HighlightedText';
 import { ScrollableHeader } from '@/components/shared/scrollable-header/ScrollableHeader';
 import { Text } from '@/components/ui/text';
-import { cn } from '@/lib/utils';
+import { GlASS_DATA } from '@/constants/about-us/about-us';
 import Image from 'next/image';
 
 const page = () => {
@@ -15,7 +18,7 @@ const page = () => {
 
 			<section className="w-full">
 				<div className="px-4 lg:px-20 max-w-[110rem] mx-auto ">
-					<Text className="max-w-[41.8rem] mr-auto">
+					<Text className="max-w-[41.8rem] mr-auto lg:mb-20 md:mb-16 mb-10">
 						We&apos;re building a sustainable and{' '}
 						<HighlightedText>connecting tomorrow</HighlightedText>, driving
 						towards transformative innovation, focused on{' '}
@@ -56,34 +59,43 @@ const page = () => {
 				/>
 			</section>
 
-			<section className="w-full mt-20 relative flex justify-center">
-				<div className=" w-full h-full mt-40 ">
-					<div
-						className={cn(
-							' w-full h-full bg-[linear-gradient(to_top,_transparent_0%_,transparent_40%_,white_90%)] absolute z-[10] top-0 flex flex-col self-end'
-						)}
-					></div>
+			<section className="w-full relative flex justify-center">
+				<PurposeSection />
+			</section>
 
-					<Image
-						src="/about-us/purpose-img-1.png"
-						alt="About us"
-						// layout="fill"
-						// fill
-						width={1200}
-						height={1200}
-						className="w-full h-full "
-					/>
-				</div>
-				<div className="max-w-[35.8rem] mx-auto px-4 flex flex-col gap-4 absolute top-0 z-10 md:pt-20">
-					<h2 className="text-h2 font-dm-serif text-primary-600 text-center">
-						Let&apos;s talk purpose
-					</h2>
-					<Text className="text-center text-reading">
-						We&apos;re building a future where technology and sustainability
-						move in sync — powering industries with advanced mobility and
-						helping reduce environmental impact, one breakthrough at a time.
-					</Text>
-				</div>
+			<section className="max-w-[110rem] mx-auto lg:px-20 px-4 py-24">
+				<PrincipleSection />
+			</section>
+
+			<section className="bg-[#070705]  relative">
+				<NextHorizon />
+			</section>
+
+			<section className="w-full py-20">
+				<ul className="max-w-[110rem] mx-auto lg:px-20 px-4 grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 ">
+					{GlASS_DATA.map((glass) => (
+						<li className="flex flex-col gap-2" key={glass.id}>
+							<div className="block  md:h-[24rem]  lg:h-[30rem]" key={glass.id}>
+								<Image
+									src="/about-us/haribansha-acharya.png"
+									alt="Man with glass"
+									width={1000}
+									height={1000}
+									className="w-full object-center object-cover h-full"
+								/>
+							</div>
+
+							<div>
+								<p className="text-gray-800 md:text-text text-sm line-clamp-1">
+									{glass.title}
+								</p>
+								<p className="md:text-text text-[12px] text-gray-400 !font-light">
+									{glass.label}
+								</p>
+							</div>
+						</li>
+					))}
+				</ul>
 			</section>
 		</article>
 	);

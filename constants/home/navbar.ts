@@ -42,31 +42,31 @@ export const COMMUNITY_MEGAMENU: MegaMenuType[] = [
 	{
 		id: 1,
 		label: 'Healthcare',
-		link: '#',
+		link: '/industries',
 		image: '/mega-menu/doc-saheb.png',
 	},
 	{
 		id: 2,
 		label: 'Environment',
-		link: '#',
+		link: '/industries',
 		image: '/mega-menu/jhaar-paat.jpeg',
 	},
 	{
 		id: 3,
 		label: 'Education',
-		link: '#',
+		link: '/industries',
 		image: '/mega-menu/pustak.jpeg',
 	},
 	{
 		id: 5,
 		label: 'Community Development',
-		link: '#',
+		link: '/industries',
 		image: '/mega-menu/hands.jpeg',
 	},
 	{
 		id: 4,
 		label: 'Child Welfare',
-		link: '#',
+		link: '/industries',
 		image: '/home/nivaran-3.jpeg',
 	},
 ];

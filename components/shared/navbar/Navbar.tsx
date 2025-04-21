@@ -32,20 +32,20 @@ const navigation: NavItem[] = [
 	{
 		id: 1,
 		name: 'Business',
-		href: '#',
+		href: '/industries',
 		current: true,
 		node: <NavbarMegaMenu data={BUSINESS_MEGAMENU} />,
 	},
 	{
 		id: 2,
 		name: 'Community',
-		href: '#',
+		href: '/industries',
 		current: false,
 		node: <NavbarMegaMenu data={COMMUNITY_MEGAMENU} />,
 	},
 	// { id: 3, name: 'Investor Relation', href: '#industries', current: false },
-	{ id: 4, name: 'NewsRoom', href: '#products', current: false },
-	{ id: 5, name: 'Careers', href: '#careers', current: false },
+	{ id: 4, name: 'NewsRoom', href: '/news-and-information', current: false },
+	{ id: 5, name: 'Careers', href: '/careers', current: false },
 ];
 
 interface NavbarRootprops extends React.ComponentProps<'header'> {

@@ -1,8 +1,8 @@
 'use client';
 
+import { CategoryButton } from '@/components/shared/category-button/CategoryButton';
 import { NEWS_CATEGORY } from '@/constants/news-and-information/news';
 import { useState } from 'react';
-import { Button } from '../../ui/button';
 
 export const NewsCategory = () => {
 	const [activeButton, setActiveButton] = useState<number | null>(null);
@@ -10,13 +10,12 @@ export const NewsCategory = () => {
 	return (
 		<div className="flex items-center gap-3 w-full  [scrollbar-width:none] overflow-x-scroll">
 			{NEWS_CATEGORY.map((location) => (
-				<Button
-					className={`bg-gray-100 text-gray-800 font-light h-fit px-3 py-1  hover:bg-primary-400 hover:text-neutral-50 cursor-pointer transition-all duration-300 ${activeButton === location.id ? 'bg-primary-400 text-neutral-50' : ''}`}
+				<CategoryButton
+					label={location.label}
+					isActive={location.id === activeButton}
+					handleIsActive={() => setActiveButton(location.id)}
 					key={location.id}
-					onClick={() => setActiveButton(location.id)}
-				>
-					{location.label}
-				</Button>
+				/>
 			))}
 		</div>
 	);

@@ -8,7 +8,7 @@ export const NewsHeader = () => {
 	return (
 		<>
 			<ScrollableHeader className="">
-				<h1>News and Information</h1>
+				<h1 className="lg:leading-28 leading-20">News and Information</h1>
 				<div className="flex md:flex-row flex-col gap-4  justify-between md:items-center ">
 					<NewsCategory />
 					<NewsSearch />

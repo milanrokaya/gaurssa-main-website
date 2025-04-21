@@ -7,65 +7,65 @@ export interface FooterDataType {
 export const FOOTER_BUSINESS_DATA: FooterDataType[] = [
 	{
 		id: 1,
-		links: '#',
+		links: '/industries',
 		label: 'Eyeware',
 	},
-	{
-		id: 2,
-		links: '#',
-		label: 'Power Plant',
-	},
+	// {
+	// 	id: 2,
+	// 	links: '#',
+	// 	label: 'Power Plant',
+	// },
 	{
 		id: 3,
-		links: '#',
+		links: '/industries',
 		label: 'Healthcare',
 	},
 	{
 		id: 4,
-		links: '#',
+		links: '/industries',
 		label: 'Automative',
 	},
-	{
-		id: 5,
-		links: '#',
-		label: 'Technology',
-	},
+	// {
+	// 	id: 5,
+	// 	links: '#',
+	// 	label: 'Technology',
+	// },
 	{
 		id: 6,
-		links: '#',
+		links: '/industries',
 		label: 'Textile',
 	},
 ];
 
 export const QUICK_LINKS_DATA: FooterDataType[] = [
-	{
-		id: 1,
-		links: '#',
-		label: 'Stock Data',
-	},
-	{
-		id: 2,
-		links: '#',
-		label: 'Business Verticals',
-	},
+	// {
+	// 	id: 1,
+	// 	links: '#',
+	// 	label: 'Stock Data',
+	// },
+	// {
+	// 	id: 2,
+	// 	links: '#',
+	// 	label: 'Business Verticals',
+	// },
 	{
 		id: 3,
-		links: '#',
-		label: 'Career',
+		links: '/careers',
+		label: 'Careers',
 	},
 	{
 		id: 4,
-		links: '#',
-		label: 'Newsroom',
+		links: '/news-and-information',
+		label: 'News Room',
 	},
 	{
 		id: 5,
-		links: '#',
+		links: '/about-us',
 		label: 'About Us',
 	},
-	{
-		id: 6,
-		links: '#',
-		label: 'Leadership',
-	},
+	// {
+	// 	id: 6,
+	// 	links: '#',
+	// 	label: 'Leadership',
+	// },
 ];
